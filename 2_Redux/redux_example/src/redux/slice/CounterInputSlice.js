@@ -6,14 +6,21 @@ const CounterInputSlice = createSlice({
         delta:1
     },
     reducers: {
-//         increment: (state) =>{
-//             // state.count++;   orr
-//             state.count+= 1;
-//         },
-//         decrement: (state) =>{
-//  // state.count--   or;
-//             state.count-= 1;
-//         }
+        increment: (state) =>{
+            // state.count++;   orr
+            state.count+= state.delta;
+        },
+        decrement: (state) =>{
+ // state.count--   or;
+            state.count-= state.delta;
+        },
+      updateDelta:(state , params) =>{
+        // to access just do params.payload here
+//    console.log("19", params.payload);
+   const delta = params.payload
+   state.delta = delta
+}
     }
 })
+// export const actions = CounterInputSlice.actions;
 export default CounterInputSlice;

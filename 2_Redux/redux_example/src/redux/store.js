@@ -7,6 +7,7 @@ import CounterInputSlice from "./slice/CounterInputSlice.js";
 const store =configureStore({
     reducer:{
         CounterState:CounterSlice.reducer,
+        // CounterInputSlice:CounterInputSlice.reducer
         CounterInputSlice:CounterInputSlice.reducer
         
 
